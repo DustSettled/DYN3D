@@ -27,7 +27,7 @@ We provide several config files under [config](./config/) folder for different d
 
 For reconstruction, you can run
 ```
-python train_nvfi.py --config ./config/InDoorObj/bat.yaml --static_dynamic 
+python train.py --config ./config/InDoorObj/bat.yaml --static_dynamic 
 ```
 
 If you want to train the segmentation fields, simply run the following commend
