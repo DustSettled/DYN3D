@@ -33,7 +33,7 @@ python train.py --config ./config/InDoorObj/bat.yaml --static_dynamic
 # Evaluation
 For generating intermediate frames, you can do so by running
 ```
-python train_nvfi.py --config ./config/InDoorObj/bat.yaml --checkpoint -1 --not_train --eval_test
+python train.py --config ./config/InDoorObj/bat.yaml --checkpoint -1 --not_train --eval_test
 ```
 
 
