@@ -30,11 +30,6 @@ For reconstruction, you can run
 python train.py --config ./config/InDoorObj/bat.yaml --static_dynamic 
 ```
 
-If you want to train the segmentation fields, simply run the following commend
-```
-python train_segm.py --config config/InDoorObj/bat.yaml --checkpoint -1
-```
-
 # Evaluation
 For generating intermediate frames, you can do so by running
 ```
