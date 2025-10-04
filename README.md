@@ -1,4 +1,4 @@
-# NVFi: Neural Velocity Fields for 3D Physics Learning from Dynamic Videos (NeurIPS 2023)
+# Dyn3D: Dynamic 3D Scene Reconstruction from Video based on Unified Learning
 
 ![image](412.png)
 We present a novel framework to simultaneously learn the geometry, appearance, and physical velocity of 3D scenes only from video frames, such that multiple desirable applications can be supported, including future frame extrapolation, unsupervised 3D semantic scene decompositio, and dynamic motion transfer.
