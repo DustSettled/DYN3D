@@ -36,14 +36,9 @@ python train_segm.py --config config/InDoorObj/bat.yaml --checkpoint -1
 ```
 
 # Evaluation
-For future frame extrapolation, you can render the results by running
+For generating intermediate frames, you can do so by running
 ```
 python train_nvfi.py --config ./config/InDoorObj/bat.yaml --checkpoint -1 --not_train --eval_test
-```
-
-For segmentation prediction, you can run
-```
-python test_segm_render.py --config config/InDoorObj/bat.yaml --checkpoint -1 --ckpt_segm 1000
 ```
 
 
