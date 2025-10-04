@@ -1,13 +1,8 @@
 # NVFi: Neural Velocity Fields for 3D Physics Learning from Dynamic Videos (NeurIPS 2023)
 
-![image](images/overview.jpg)
+![image](412.png)
 We present a novel framework to simultaneously learn the geometry, appearance, and physical velocity of 3D scenes only from video frames, such that multiple desirable applications can be supported, including future frame extrapolation, unsupervised 3D semantic scene decompositio, and dynamic motion transfer.
 
-![image](images/fallingball-extrap.gif)
-![image](images/chessboard-extrap.gif)
-![image](images/fan-seg.gif)
-![image](images/chessboard-seg.gif)
-![image](images/objtrans.gif)
 # Environment Setup
 ```
     # create conda environment
