@@ -1,7 +1,7 @@
 # Dyn3D: Dynamic 3D Scene Reconstruction from Video based on Unified Learning
 
 ![image](412.png)
-We present a novel framework to simultaneously learn the geometry, appearance, and physical velocity of 3D scenes only from video frames, such that multiple desirable applications can be supported, including future frame extrapolation, unsupervised 3D semantic scene decompositio, and dynamic motion transfer.
+Performing spatiotemporal interpolation of dynamic 3D scenes without effective supervision signals is a critical challenge.Such tasks require models to accurately capture rigid motion trajectories, deformable dynamic details, cross-view structural consistency, and evolutionary patterns across multiple timestamps under the stringent condition of limited strong supervision. However, existing methods often face issues of low reconstruction accuracy, poor perceptual consistency, or weak generalization capability due to their inability to effectively model spatiotemporal correlations.This paper proposes a spatiotemporal interpolation framework for dynamic 3D scenes, named DYN3D, which innovatively introduces a velocity field and a keyframe network. The velocity field learns the motion vector field of objects in the scene to explicitly model their motion trends and dynamic properties, while the keyframe network focuses on mining transition patterns between adjacent keyframes, providing implicit associative guidance for complex motions under sparse timestamp supervision,outperforming both traditional and emerging PINN-based methods.This work provides a reliable solution for high-quality reconstruction of complex dynamic 3D scenes under sparse supervision.
 
 # Environment Setup
 ```
