@@ -6,10 +6,10 @@ We present a novel framework to simultaneously learn the geometry, appearance, a
 # Environment Setup
 ```
     # create conda environment
-    conda create --name nvfi python=3.9
+    conda create --name Dyn3D python=3.9
     
     # activate env
-    conda activate nvfi
+    conda activate Dyn3D
     conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1  cudatoolkit=11.6 -c pytorch -c conda-forge
     pip install functorch==0.2.1
     
