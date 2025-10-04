@@ -42,6 +42,3 @@ python train_nvfi.py --config ./config/InDoorObj/bat.yaml --checkpoint -1 --not_
 ```
 
 
-# Citation
-If you find this code useful, please consider citing:
-
