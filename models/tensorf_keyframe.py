@@ -668,29 +668,8 @@ class TensorVMKeyframeTimeKplane(TensorBase):
             xyz_prev = pos_init.clone()
 
         t_curr = t
-        # xyz_prev=xyz_prev.requires_grad_(True)
-        # base_times=base_times.requires_grad_(True)
-        # t_curr=t_curr.requires_grad_(True)
-        # print(f"xyz_prev: {xyz_prev.shape}, base_times: {base_times.shape}")
         device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        # pretrained_model = VGG16XYTZPredictor(input_time_dim=1,output_dim=4).to(device)
-        
-        # optimizer = torch.optim.Adam(pretrained_model.parameters(),lr=0.001)
-        # criteon=nn.CrossEntropyLoss()
-        # pretrained_model.train().to(device)
-        
-        # for i in range(30):
-        #     prv=pretrained_model(xyz_prev,base_times).to(device) 
-        #     loss = torch.mean((prv - torch.cat([xyz_prev,t_curr],dim=-1)) ** 2)
-        #     print("loss.requires_grad:", loss.requires_grad)
-        #     optimizer.zero_grad()
-        #     loss.backward()
-        #     optimizer.step()
-            
-        # pretrained_model.eval().to(device) 
-        # pretrained_model = pretrained_model(xyz_prev,base_times).to(device)
-         # 加载预训练权重
-         # 切换到推理模式
+
         
         unfinished = (time_offset.abs() > 0).squeeze(-1)
         while unfinished.any():
@@ -1000,28 +979,3 @@ class TensorVMKeyframeTimeKplane(TensorBase):
         mask_map = torch.sum(weight[..., None] * mask, -2)
 
         return rgb_map, depth_map, acc_map, weight, mask_map  # rgb, sigma, alpha, weight, bg_weight
-
-
-
-if __name__ == '__main__':
-    import argparse
-    
-    parser = argparse.ArgumentParser()
-    aabb = torch.tensor([[-1.0, -1.0, -1.0], [1.0, 1.0, 1.0]], dtype=torch.float32)  # 场景包围盒
-    gridSize = (64, 64, 64)  # 网格分辨率
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')  # 自动选择设备
-    near_far = (0.1, 100.0)  # 近远裁剪平面
-    config_args = parser.parse_args()
-    
-    rgb_map, depth_map, acc_map, weight, mask_map=TensorVMKeyframeTimeKplane(aabb=aabb,
-    gridSize=gridSize,
-    device=device,
-    near_far=near_far,
-    cfg=config_args)
-    # 调用渲染函数
-    
-
-    # 打印结果（示例）
-    print("渲染完成！")
-    print("图像尺寸：", rgb_map.shape)
-    print("深度图尺寸：", depth_map.shape)
